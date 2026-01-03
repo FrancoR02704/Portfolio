@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio profesional de Franco Romano — Operaciones + SAP / Sistemas (SAP EWM / S/4HANA, ERP, Power BI, KPIs)." />
+  <title>Franco Romano | Operaciones + SAP / Sistemas</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1621;
+      --text:#e9eef5;
+      --muted:#a9b4c3;
+      --line:rgba(255,255,255,.10);
+      --accent:#6ee7ff;
+      --accent2:#a78bfa;
+      --ok:#34d399;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius:18px;
+      --radius2:24px;
+      --max: 1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% -10%, rgba(110,231,255,.22), transparent 55%),
+        radial-gradient(900px 600px at 90% 0%, rgba(167,139,250,.20), transparent 55%),
+        radial-gradient(900px 600px at 50% 100%, rgba(52,211,153,.12), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{opacity:.92}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border:1px solid var(--line);
+      border-radius:999px; background:rgba(255,255,255,.03);
+      color:var(--muted); font-size:13px;
+      backdrop-filter: blur(8px);
+    }
+    .chip{
+      display:inline-flex; align-items:center;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      border-bottom:1px solid var(--line);
+      background:rgba(11,15,20,.65);
+      backdrop-filter: blur(10px);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px;}
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(110,231,255,.95), rgba(167,139,250,.95));
+      box-shadow: 0 10px 25px rgba(110,231,255,.10);
+    }
+    .nav-links{
+      display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+      color:var(--muted); font-size:14px;
+    }
+    .nav-links a{padding:8px 10px; border-radius:12px}
+    .nav-links a:hover{background:rgba(255,255,255,.05); color:var(--text)}
+    .nav-cta{display:flex; gap:10px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:600;
+      font-size:14px;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      user-select:none;
+    }
+    .btn:hover{background:rgba(255,255,255,.06); transform: translateY(-1px)}
+    .btn.primary{
+      border-color: rgba(110,231,255,.35);
+      background: linear-gradient(135deg, rgba(110,231,255,.20), rgba(167,139,250,.18));
+    }
+    .btn.primary:hover{border-color: rgba(110,231,255,.55);}
+
+    /* HERO */
+    header.hero{padding:54px 0 28px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:20px;
+      align-items:stretch;
+    }
+    .hero-card{
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-card .inner{padding:28px}
+    .glow{
+      position:absolute; inset:-120px -120px auto auto;
+      width:340px; height:340px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(110,231,255,.25), transparent 60%);
+      filter: blur(6px);
+      pointer-events:none;
+    }
+    h1{
+      margin:10px 0 10px;
+      font-size: 40px;
+      line-height:1.12;
+      letter-spacing:-.6px;
+    }
+    .subtitle{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
+    .micro{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .side-card{
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .kpi{display:grid; gap:12px; margin-top:8px;}
+    .kpi .row{
+      padding:12px 12px;
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+    }
+    .kpi .label{color:var(--muted); font-size:12px}
+    .kpi .value{font-weight:800; margin-top:2px}
+    .note{color:var(--muted); font-size:13px}
+
+    /* SECTIONS */
+    section{padding:34px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom:16px;
+    }
+    h2{margin:0; font-size:24px; letter-spacing:-.3px}
+    .lead{margin:0; color:var(--muted); font-size:14px}
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .icon{
+      width:36px; height:36px; border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      display:flex; align-items:center; justify-content:center;
+      margin-bottom:12px;
+      font-weight:800;
+    }
+
+    .profile{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .list{
+      margin:0; padding:0; list-style:none;
+      display:grid; gap:10px;
+    }
+    .list li{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding:12px 12px;
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-size:14px;
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .tick{
+      width:18px; height:18px; border-radius:6px;
+      background: rgba(52,211,153,.15);
+      border:1px solid rgba(52,211,153,.35);
+      display:inline-flex; align-items:center; justify-content:center;
+      color: var(--ok);
+      font-weight:900; font-size:12px;
+      flex: 0 0 18px;
+      margin-top:2px;
+    }
+
+    /* CASES */
+    .cases{display:grid; grid-template-columns: 1fr; gap:12px;}
+    details.case{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      overflow:hidden;
+    }
+    details.case summary{
+      cursor:pointer;
+      padding:16px 16px;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      user-select:none;
+    }
+    details.case summary::-webkit-details-marker{display:none}
+    .case-title{display:flex; align-items:center; gap:12px; font-weight:800;}
+    .badge{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background: rgba(255,255,255,.02);
+      white-space:nowrap;
+    }
+    .chev{color:var(--muted); transition: transform .15s ease;}
+    details.case[open] .chev{transform: rotate(180deg)}
+    .case-body{padding:0 16px 16px; color:var(--muted); font-size:14px;}
+    .case-body .em{
+      margin-top:10px;
+      color: var(--text);
+      display:inline-flex; gap:8px; align-items:center;
+      font-weight:700;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(135deg, rgba(110,231,255,.9), rgba(167,139,250,.9));
+      box-shadow: 0 10px 25px rgba(110,231,255,.12);
+    }
+
+    /* STACK */
+    .stack-wrap{display:flex; flex-wrap:wrap; gap:10px;}
+
+    /* CTA */
+    .cta{
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      background: linear-gradient(135deg, rgba(110,231,255,.14), rgba(167,139,250,.12));
+      box-shadow: var(--shadow);
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap:16px;
+      align-items:center;
+    }
+    .cta h2{font-size:22px; margin:0 0 6px}
+    .cta p{margin:0; color:var(--muted)}
+    .cta .actions{display:flex; gap:12px; justify-content:flex-end; flex-wrap:wrap}
+
+    /* CONTACT */
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .contact a.inline{
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer{
+      padding:26px 0 40px;
+      color:var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 14px;
+      font-size:13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+      .cta{grid-template-columns:1fr}
+      .cta .actions{justify-content:flex-start}
+      h1{font-size:34px}
+      .grid-3{grid-template-columns:1fr}
+      .profile{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>Franco Romano</div>
+        </div>
+
+        <nav class="nav-links" aria-label="Secciones">
+          <a href="#impacto">Impacto</a>
+          <a href="#perfil">Perfil</a>
+          <a href="#casos">Casos</a>
+          <a href="#stack">Herramientas</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn" href="https://www.linkedin.com/in/franco-romano-" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn primary" href="#contacto">Contactar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="glow" aria-hidden="true"></div>
+          <div class="inner">
+            <span class="pill">📍 Gral. Rodríguez, Buenos Aires · Remoto / Híbrido</span>
+
+            <h1>Analista de Operaciones & Sistemas Logísticos<br/>SAP · ERP · KPIs</h1>
+
+            <p class="subtitle">
+              Conecto la <strong>operación real</strong> con los <strong>sistemas</strong> para ordenar procesos,
+              reducir desvíos y mejorar decisiones con datos.
+              Experiencia en <strong>SAP EWM / S/4HANA</strong>, <strong>ERP</strong>, validaciones <strong>QA/PRD</strong> y tableros en <strong>Power BI</strong>.
+            </p>
+
+            <!-- ✅ CTA HERO (incluye Descargar CV + WhatsApp) -->
+<div class="cta-row">
+  <a class="btn primary" href="#casos">Ver casos de éxito</a>
+
+  <a class="btn" href="#contacto">Contactar</a>
+
+  <a class="btn"
+     href="https://drive.google.com/uc?export=download&id=1MVUJJxsWTRpVGBf3Y8A8DUMmSsBCtXFB"
+     target="_blank"
+     rel="noopener"
+     download>
+    Descargar CV
+  </a>
+
+  <a class="btn"
+     href="https://wa.me/5491134206768?text=Hola%20Franco,%20estuve%20revisando%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20coordinar%20una%20charla."
+     target="_blank"
+     rel="noopener">
+    WhatsApp
+  </a>
+
+  <a class="btn" href="https://www.linkedin.com/in/franco-romano-" target="_blank" rel="noopener">
+    Abrir LinkedIn
+  </a>
+</div>
+
+
+            <div class="micro">
+              <span class="chip">Operación → Sistema</span>
+              <span class="chip">QA / PRD</span>
+              <span class="chip">Maestro de artículos</span>
+              <span class="chip">RF</span>
+              <span class="chip">KPIs + Power BI</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side-card" aria-label="Resumen rápido">
+          <div>
+            <div class="pill">⚡ Resumen ejecutivo</div>
+            <div class="kpi">
+              <div class="row">
+                <div class="label">Experiencia</div>
+                <div class="value">+4 años</div>
+              </div>
+              <div class="row">
+                <div class="label">Rol natural</div>
+                <div class="value">Operaciones + Sistemas</div>
+              </div>
+              <div class="row">
+                <div class="label">Foco</div>
+                <div class="value">Desvíos · Control · KPIs</div>
+              </div>
+            </div>
+          </div>
+          <p class="note">
+            “La operación manda; el sistema acompaña.” Suena simple… y evita incendios.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <!-- IMPACTO -->
+  <section id="impacto">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Impacto que genero</h2>
+          <p class="lead">Menos ruido operativo, más control sistémico y decisiones con data.</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon">🧩</div>
+          <h3>Operación ↔ Sistema</h3>
+          <p>Traduzco lo que pasa en piso a reglas de WMS/ERP: procesos claros, datos maestros bien definidos y menos desvíos.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧪</div>
+          <h3>QA / PRD y control</h3>
+          <p>Valido procesos en entornos de prueba y productivos, documento fallas y coordino ajustes con equipos de desarrollo.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>KPIs accionables</h3>
+          <p>Tableros en Power BI y seguimiento operativo (Fill Rate, stock, productividad) para decidir rápido y con evidencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section id="perfil">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Perfil</h2>
+          <p class="lead">Híbrido: entiendo operación y también el “por qué” del sistema.</p>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="card">
+          <h3>Quién soy</h3>
+          <p>
+            Analista de Operaciones Logísticas con foco en sistemas, con experiencia en planificación, optimización de procesos
+            y gestión de KPIs. Trabajo integrando operación + SAP/ERP para mejorar trazabilidad, reducir reprocesos y sostener
+            mejoras con datos. Participación en validaciones QA/PRD, documentación de errores, y acompañamiento a usuarios.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Especialidades</h3>
+          <ul class="list">
+            <li><span class="tick">✓</span> SAP EWM / S/4HANA (visión funcional operativa)</li>
+            <li><span class="tick">✓</span> QA / PRD: validación, documentación y seguimiento de incidencias</li>
+            <li><span class="tick">✓</span> Maestro de artículos: parametrización y calidad de datos</li>
+            <li><span class="tick">✓</span> Procesos: flujo, layout, devoluciones y controles por RF</li>
+            <li><span class="tick">✓</span> KPIs + Power BI: seguimiento, alertas y priorización</li>
+            <li><span class="tick">✓</span> Excel avanzado + análisis de datos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASOS -->
+  <section id="casos">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Casos de éxito</h2>
+          <p class="lead">Primero sistema + control, después eficiencia. Orden de prioridad real.</p>
+        </div>
+        <a class="btn" href="#contacto">Hablemos</a>
+      </div>
+
+      <div class="cases">
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">01</span>
+              Parametrización de maestro de artículos
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Detecté desvíos originados por datos incorrectos de artículos. Ajusté campos clave del maestro para que el sistema acompañe el flujo real.
+            <div class="em"><span class="dot"></span>Impacto: menos errores en picking, despacho y movimientos de stock</div>
+          </div>
+        </details>
+
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">02</span>
+              Desarrollo de nuevos procesos: controles por RF
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Implementación de controles con RF para mejorar trazabilidad y reducir errores manuales, con pruebas reales y acompañamiento a usuarios.
+            <div class="em"><span class="dot"></span>Impacto: más control, menos errores y mayor confiabilidad</div>
+          </div>
+        </details>
+
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">03</span>
+              Pruebas end-to-end de despacho (clientes de distribución)
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Validación completa desde picking hasta entrega y devolución para asegurar coherencia entre sistema y operación real.
+            <div class="em"><span class="dot"></span>Impacto: detección temprana de desvíos antes de escalar volúmenes</div>
+          </div>
+        </details>
+
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">04</span>
+              Generación y seguimiento de KPIs (Power BI / Excel)
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Definí indicadores de stock, productividad, tiempos y nivel de servicio. Armé reportes y tableros para visibilidad y decisión.
+            <div class="em"><span class="dot"></span>Impacto: gestión por datos, priorización objetiva de mejoras</div>
+          </div>
+        </details>
+
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">05</span>
+              Reorganización del flujo de mercadería del depósito
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Reorganización del flujo separando zonas de ingreso, preparación y salida tras analizar recorridos reales.
+            <div class="em"><span class="dot"></span>Impacto: menos recorridos internos y mejor fluidez operativa</div>
+          </div>
+        </details>
+
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">06</span>
+              Layout según rotación ABC y tipo de material
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Rediseño del layout ubicando alta rotación cerca de picking y baja rotación en posiciones secundarias.
+            <div class="em"><span class="dot"></span>Impacto: mayor productividad de picking y orden de almacenamiento</div>
+          </div>
+        </details>
+
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">07</span>
+              Flujo de devoluciones (logística inversa)
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Estandarización del flujo completo desde ingreso, control, clasificación y destino final.
+            <div class="em"><span class="dot"></span>Impacto: trazabilidad + control de stock + menos reprocesos</div>
+          </div>
+        </details>
+
+        <details class="case">
+          <summary>
+            <div class="case-title">
+              <span class="badge">08</span>
+              Mejora de proceso de picking (3 carros)
+            </div>
+            <span class="chev">▾</span>
+          </summary>
+          <div class="case-body">
+            Pruebas midiendo tiempos, secuencia y carga para ajustar la forma de preparación.
+            <div class="em"><span class="dot"></span>Impacto: más productividad y menos reprocesos sin sumar recursos</div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Herramientas</h2>
+          <p class="lead">Tecnología aplicada a resultados operativos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="stack-wrap">
+          <span class="chip">SAP EWM</span>
+          <span class="chip">SAP S/4HANA</span>
+          <span class="chip">ERP (Infor)</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Excel Avanzado</span>
+          <span class="chip">QA / PRD</span>
+          <span class="chip">Data Master (Artículos)</span>
+          <span class="chip">RF</span>
+          <span class="chip">KPIs</span>
+          <span class="chip">Mejora continua</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>Si necesitás alinear operación y sistemas, hablemos.</h2>
+          <p>Me integro rápido, valido procesos, ordeno datos y dejo KPIs listos para gestionar sin adivinar.</p>
+        </div>
+        <div class="actions">
+  <a class="btn primary" href="#contacto">Contactar</a>
+
+  <a class="btn"
+     href="https://wa.me/5491134206768?text=Hola%20Franco,%20estuve%20revisando%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20coordinar%20una%20charla."
+     target="_blank"
+     rel="noopener">
+    WhatsApp
+  </a>
+
+  <a class="btn"
+     href="https://drive.google.com/uc?export=download&id=1MVUJJxsWTRpVGBf3Y8A8DUMmSsBCtXFB"
+     target="_blank"
+     rel="noopener">
+    Descargar CV
+  </a>
+
+  <a class="btn"
+     href="https://www.linkedin.com/in/franco-romano-"
+     target="_blank"
+     rel="noopener">
+    LinkedIn
+  </a>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Contacto</h2>
+          <p class="lead">Si hay proceso para ordenar y sistema para alinear, me prendo.</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="card">
+          <h3>Canales</h3>
+          <p class="lead">
+            📩 Email:
+            <a class="inline" href="mailto:Romano-181@outlook.com">Romano-181@outlook.com</a>
+          </p>
+          <p class="lead" style="margin-top:10px">
+            🔗 LinkedIn:
+            <a class="inline" href="https://www.linkedin.com/in/franco-romano-" target="_blank" rel="noopener">
+              www.linkedin.com/in/franco-romano-
+            </a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Disponibilidad</h3>
+          <p class="lead">Buenos Aires · Remoto / Híbrido</p>
+          <ul class="list" style="margin-top:12px">
+            <li><span class="tick">✓</span> Soporte funcional SAP/ERP + validaciones</li>
+            <li><span class="tick">✓</span> Procesos operativos (flujo, layout, devoluciones)</li>
+            <li><span class="tick">✓</span> KPIs + tableros para gestión</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Franco Romano · Operaciones + SAP / Sistemas · SAP · ERP · KPIs
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Cierra otros cases al abrir uno (UX prolija)
+    const cases = document.querySelectorAll("details.case");
+    cases.forEach(d => {
+      d.addEventListener("toggle", () => {
+        if (d.open) cases.forEach(other => { if (other !== d) other.open = false; });
+      });
+    });
+  </script>
+</body>
+</html>
+Initial portfolio website
