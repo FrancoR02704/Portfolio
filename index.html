@@ -7,13 +7,13 @@
   <title>Franco Romano | Operaciones + SAP / Sistemas</title>
   <style>
     :root{
-  --bg:#f8fafc;              
-  --panel:#ffffff;           
-  --text:#0f172a;            
-  --muted:#475569;           
-  --line:rgba(15,23,42,.12); 
-  --accent:#2563eb;          
-  --accent2:#0ea5e9;         
+  --bg:#f9fafb;           
+  --panel:#ffffff;         
+  --text:#0f172a;          
+  --muted:#475569;         
+  --line:rgba(15,23,42,.08);
+  --accent:#1e40af;        
+  --accent2:#2563eb;       
   --ok:#16a34a;
 }
     *{box-sizing:border-box}
@@ -52,11 +52,13 @@
 
     /* NAV */
     .nav{
-      position:sticky; top:0; z-index:50;
-      border-bottom:1px solid var(--line);
-      background:rgba(11,15,20,.65);
-      backdrop-filter: blur(10px);
-    }
+  position:sticky;
+  top:0;
+  z-index:50;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.85);
+  backdrop-filter: blur(10px);
+}
     .nav-inner{
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0;
@@ -303,6 +305,16 @@
       .contact{grid-template-columns:1fr}
       .nav-links{display:none}
     }
+    .btn.primary{
+  background: var(--accent);
+  border-color: var(--accent);
+  color:#ffffff;
+}
+
+.btn.primary:hover{
+  background: var(--accent2);
+  border-color: var(--accent2);
+}
   </style>
 </head>
 
@@ -591,7 +603,7 @@
           <summary>
             <div class="case-title">
               <span class="badge">08</span>
-              Mejora de proceso de picking (3 carros)
+              Mejora de proceso de picking
             </div>
             <span class="chev">▾</span>
           </summary>
@@ -724,6 +736,4 @@
   </script>
 </body>
 </html>
-body {
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
-}
+
