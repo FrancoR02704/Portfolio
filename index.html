@@ -20,6 +20,10 @@
 
   <style>
     :root{
+    --max: 1100px;
+  --radius: 18px;
+  --radius2: 22px;
+  --shadow: 0 12px 30px rgba(15,23,42,.06);
   --bg:#f9fafb;           
   --panel:#ffffff;         
   --text:#0f172a;          
@@ -34,6 +38,13 @@
    ========================= */
 
 .side-card.exec{
+  gap:14px;
+}
+.side-card.exec{
+  padding: 28px;                /* igual que .hero-card .inner */
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
   gap:14px;
 }
 
@@ -635,6 +646,9 @@ details.case summary:hover{
 
   <!-- ✅ MICRO-CIERRE (ACÁ) -->
   <div class="exec-foot">
+    .exec-foot{
+  margin-top: auto;   /* clave: empuja el cierre hacia abajo */
+}
     <span class="pill">🎯 Enfoque de gestión</span>
     <span class="exec-foot-text">
       Control operativo, trazabilidad y gestión por indicadores.
