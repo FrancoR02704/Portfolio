@@ -29,6 +29,107 @@
   --accent2:#2563eb;       
   --ok:#16a34a;
 }
+    /* =========================
+   Resumen ejecutivo (upgrade)
+   ========================= */
+
+.side-card.exec{
+  gap:14px;
+}
+
+.exec-top{
+  display:grid;
+  gap:8px;
+}
+
+.exec-sub{
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.exec-kpi{
+  display:grid;
+  gap:10px;
+}
+
+.kpi-box{
+  padding:12px 12px;
+  border:1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 10px 26px rgba(15,23,42,.06);
+  backdrop-filter: blur(10px);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.kpi-box:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(15,23,42,.08);
+  border-color: rgba(30,64,175,.18);
+}
+
+.kpi-box .label{
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.kpi-box .value{
+  font-weight: 850;
+  margin-top: 2px;
+  font-size: 18px;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.kpi-box .value .big{
+  font-size: 28px;
+  margin-right: 6px;
+}
+
+.kpi-box .hint{
+  margin-top: 6px;
+  color: rgba(71,85,105,.9);
+  font-size: 12.5px;
+}
+
+.mutedx{
+  color: rgba(71,85,105,.8);
+  font-weight: 800;
+}
+
+.exec-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.exec-quote{
+  display:grid;
+  grid-template-columns: 20px 1fr;
+  gap:10px;
+  align-items:start;
+  padding:12px 12px;
+  border-radius: 16px;
+  border:1px dashed rgba(30,64,175,.28);
+  background: rgba(30,64,175,.06);
+}
+
+.exec-quote .q{
+  font-size: 28px;
+  line-height: 1;
+  color: rgba(30,64,175,.75);
+}
+
+.exec-quote p{
+  margin:0;
+  color: rgba(15,23,42,.72);
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -502,28 +603,46 @@ details.case summary:hover{
           </div>
         </div>
 
-        <aside class="side-card" aria-label="Resumen rápido">
-          <div>
-            <div class="pill">⚡ Resumen ejecutivo</div>
-            <div class="kpi">
-              <div class="row">
-                <div class="label">Experiencia</div>
-                <div class="value">+4 años</div>
-              </div>
-              <div class="row">
-                <div class="label">Rol natural</div>
-                <div class="value">Operaciones + Sistemas</div>
-              </div>
-              <div class="row">
-                <div class="label">Foco</div>
-                <div class="value">Desvíos · Control · KPIs</div>
-              </div>
-            </div>
-          </div>
-          <p class="note">
-            “La operación manda; el sistema acompaña.” Suena simple… y evita incendios.
-          </p>
-        </aside>
+      <aside class="side-card exec" aria-label="Resumen rápido">
+  <div class="exec-top">
+    <div class="pill">⚡ Resumen ejecutivo</div>
+    <div class="exec-sub">
+      Puente entre operación y sistemas: convierto desvíos en procesos medibles.
+    </div>
+  </div>
+
+  <div class="exec-kpi">
+    <div class="kpi-box">
+      <div class="label">Experiencia</div>
+      <div class="value"><span class="big">4+</span> años</div>
+      <div class="hint">Logística retail / mayorista</div>
+    </div>
+
+    <div class="kpi-box">
+      <div class="label">Rol natural</div>
+      <div class="value">Operaciones <span class="mutedx">×</span> Sistemas</div>
+      <div class="hint">WMS/ERP · Datos · Mejora continua</div>
+    </div>
+
+    <div class="kpi-box">
+      <div class="label">Foco</div>
+      <div class="value">Desvíos · Control · KPIs</div>
+      <div class="hint">Causa raíz + estandarización</div>
+    </div>
+  </div>
+
+  <div class="exec-chips" aria-label="Habilidades clave">
+    <span class="chip">SAP EWM</span>
+    <span class="chip">S/4HANA</span>
+    <span class="chip">Power BI</span>
+    <span class="chip">QA/PRD</span>
+  </div>
+
+  <div class="exec-quote">
+    <span class="q">“</span>
+    <p>La operación manda; el sistema acompaña. Suena simple… y evita incendios.</p>
+  </div>
+</aside>
       </div>
     </div>
   </header>
