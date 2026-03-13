@@ -3,302 +3,457 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Portfolio profesional de Franco Romano — Operaciones + SAP / Sistemas (SAP EWM / S/4HANA, ERP, Power BI, KPIs)." />
-  <title>Franco Romano | Operaciones + SAP / Sistemas</title>
-<!-- Meta Open Graph / LinkedIn / WhatsApp -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Franco Romano | Operaciones & Sistemas Logísticos">
-<meta property="og:description" content="Analista de Operaciones y Sistemas. SAP EWM / S/4HANA, ERP, KPIs y Power BI. Conecto la operación real con el sistema para ordenar procesos y mejorar decisiones.">
-<meta property="og:url" content="https://francor02704.github.io/Portfolio/">
-<meta property="og:image" content="https://francor02704.github.io/Portfolio/franco-romano.jpg">
+  <meta name="description" content="Portfolio profesional de Franco Romano — Consultor SAP funcional orientado a Operaciones y Sistemas Logísticos. SAP EWM / S/4HANA, ERP, Power BI, QA/PRD y mejora de procesos." />
+  <title>Franco Romano | Consultor SAP Funcional · Operaciones & Sistemas</title>
 
-<!-- Twitter (también lo usa LinkedIn internamente) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Franco Romano | Operaciones & Sistemas Logísticos">
-<meta name="twitter:description" content="SAP EWM / S/4HANA · ERP · KPIs · Power BI. Operación + sistema, sin humo.">
-<meta name="twitter:image" content="https://francor02704.github.io/Portfolio/franco-romano.jpg">
+  <!-- Open Graph / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Franco Romano | Consultor SAP Funcional · Operaciones & Sistemas">
+  <meta property="og:description" content="Consultor SAP funcional con foco en SAP EWM / S/4HANA, procesos logísticos, validaciones QA/PRD, KPIs y mejora operativa.">
+  <meta property="og:url" content="https://francor02704.github.io/Portfolio/">
+  <meta property="og:image" content="https://francor02704.github.io/Portfolio/franco-romano.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Franco Romano | Consultor SAP Funcional · Operaciones & Sistemas">
+  <meta name="twitter:description" content="SAP EWM / S/4HANA · ERP · QA/PRD · Power BI · Mejora de procesos.">
+  <meta name="twitter:image" content="https://francor02704.github.io/Portfolio/franco-romano.jpg">
 
   <style>
     :root{
-    --max: 1100px;
-  --radius: 18px;
-  --radius2: 22px;
-  --shadow: 0 12px 30px rgba(15,23,42,.06);
-  --bg:#f9fafb;           
-  --panel:#ffffff;         
-  --text:#0f172a;          
-  --muted:#475569;         
-  --line:rgba(15,23,42,.08);
-  --accent:#1e40af;        
-  --accent2:#2563eb;       
-  --ok:#16a34a;
-}
-    /* =========================
-   Resumen ejecutivo (upgrade)
-   ========================= */
+      --max: 1120px;
+      --radius: 18px;
+      --radius2: 24px;
+      --shadow: 0 14px 34px rgba(15,23,42,.08);
 
-.side-card.exec{
-  gap:14px;
-}
-.side-card.exec{
-  padding: 28px;                /* igual que .hero-card .inner */
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  gap:14px;
-}
-
-.exec-top{
-  display:grid;
-  gap:8px;
-}
-
-.exec-sub{
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.exec-kpi{
-  display:grid;
-  gap:10px;
-}
-
-.kpi-box{
-  padding:12px 12px;
-  border:1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255,255,255,.55);
-  box-shadow: 0 10px 26px rgba(15,23,42,.06);
-  backdrop-filter: blur(10px);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-
-.kpi-box:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 14px 34px rgba(15,23,42,.08);
-  border-color: rgba(30,64,175,.18);
-}
-
-.kpi-box .label{
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-}
-
-.kpi-box .value{
-  font-weight: 850;
-  margin-top: 2px;
-  font-size: 18px;
-  line-height: 1.1;
-  color: var(--text);
-}
-
-.kpi-box .value .big{
-  font-size: 28px;
-  margin-right: 6px;
-}
-
-.kpi-box .hint{
-  margin-top: 6px;
-  color: rgba(71,85,105,.9);
-  font-size: 12.5px;
-}
-
-.mutedx{
-  color: rgba(71,85,105,.8);
-  font-weight: 800;
-}
-
-.exec-chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-/* Micro-cierre neutro (perfil gerencial) */
-.exec-foot{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  flex-wrap:wrap;
-  padding-top:6px;
-}
-
-.exec-foot-text{
-  color: rgba(15,23,42,.72);
-  font-size: 13.5px;
-  line-height: 1.3;
-}
-
+      --bg:#f8fafc;
+      --panel:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:rgba(15,23,42,.08);
+      --accent:#1e40af;
+      --accent2:#2563eb;
+      --soft:#eff6ff;
+      --ok:#16a34a;
+    }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color:var(--text);
       background:
-        radial-gradient(1200px 700px at 10% -10%, rgba(110,231,255,.22), transparent 55%),
-        radial-gradient(900px 600px at 90% 0%, rgba(167,139,250,.20), transparent 55%),
-        radial-gradient(900px 600px at 50% 100%, rgba(52,211,153,.12), transparent 55%),
+        radial-gradient(1200px 700px at 10% -10%, rgba(110,231,255,.18), transparent 55%),
+        radial-gradient(900px 600px at 90% 0%, rgba(167,139,250,.14), transparent 55%),
+        radial-gradient(900px 600px at 50% 100%, rgba(52,211,153,.08), transparent 55%),
         var(--bg);
-      line-height:1.5;
+      line-height:1.55;
     }
-    a{color:inherit; text-decoration:none}
-    a:hover{opacity:.92}
-    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    a{color:inherit;text-decoration:none}
+    a:hover{opacity:.95}
+
+    .container{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
+    }
+
     .pill{
-  display:inline-flex; align-items:center; gap:8px;
-  padding:10px 14px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background: rgba(15,23,42,.03);
-  color:var(--muted);
-  font-size:13px;
-  backdrop-filter: blur(8px);
-}
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(15,23,42,.03);
+      color:var(--muted);
+      font-size:13px;
+      backdrop-filter: blur(8px);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .pill:hover{
+      background: rgba(15,23,42,.04);
+      border-color: rgba(15,23,42,.14);
+    }
+
     .chip{
-  display:inline-flex; align-items:center;
-  padding:10px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background: rgba(15,23,42,.03);
-  color:var(--text);
-  font-size:13px;
-  white-space:nowrap;
-}
+      display:inline-flex;
+      align-items:center;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(15,23,42,.03);
+      color:var(--text);
+      font-size:13px;
+      white-space:nowrap;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .chip:hover{
+      background: rgba(15,23,42,.04);
+      border-color: rgba(15,23,42,.14);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font-weight:600;
+      font-size:14px;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
+      user-select:none;
+    }
+
+    .btn:hover{
+      background: rgba(15,23,42,.03);
+      transform: translateY(-1px);
+    }
+
+    .btn:active{
+      transform: translateY(0) scale(.99);
+    }
+
+    .btn.primary{
+      background: var(--accent);
+      border-color: var(--accent);
+      color:#fff;
+      box-shadow: 0 12px 26px rgba(30,64,175,.18);
+    }
+
+    .btn.primary:hover{
+      background: var(--accent2);
+      border-color: var(--accent2);
+      box-shadow: 0 16px 34px rgba(37,99,235,.22);
+    }
 
     /* NAV */
     .nav{
-  position:sticky;
-  top:0;
-  z-index:50;
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
-}
+      position:sticky;
+      top:0;
+      z-index:50;
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.88);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 28px rgba(15,23,42,.05);
+    }
+
     .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       gap:12px;
+      padding:14px 0;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px;}
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+
     .logo{
-      width:34px; height:34px; border-radius:12px;
-      background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-      box-shadow: 0 10px 25px rgba(110,231,255,.10);
+      width:34px;
+      height:34px;
+      border-radius:12px;
+      object-fit:cover;
+      border:1px solid var(--line);
+      background:#fff;
+      box-shadow: 0 6px 18px rgba(15,23,42,.12);
+      display:block;
+      transition: transform .18s ease, box-shadow .18s ease;
     }
+
+    .brand:hover .logo{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(37,99,235,.18);
+    }
+
     .nav-links{
-      display:flex; gap:14px; flex-wrap:wrap; align-items:center;
-      color:var(--muted); font-size:14px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      color:var(--muted);
+      font-size:14px;
     }
-    .nav-links a{padding:8px 10px; border-radius:12px}
-    .nav-links a:hover{background: rgba(15,23,42,.03); color: var(--text)}
-    .nav-cta{display:flex; gap:10px; align-items:center}
-    .btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  gap:10px;
-  padding:11px 14px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background:#ffffff;
-  color:var(--text);
-  font-weight:600;
-  font-size:14px;
-  cursor:pointer;
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
-  user-select:none;
-}
-.btn:hover{background: rgba(15,23,42,.03); transform: translateY(-1px)}
-    .btn.primary{
-      border-color: rgba(110,231,255,.35);
-      background: linear-gradient(135deg, rgba(110,231,255,.20), rgba(167,139,250,.18));
+
+    .nav-links a{
+      padding:8px 10px;
+      border-radius:12px;
     }
-    .btn.primary:hover{border-color: rgba(110,231,255,.55);}
+
+    .nav-links a:hover{
+      background: rgba(15,23,42,.03);
+      color: var(--text);
+    }
+
+    .nav-cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
 
     /* HERO */
-    header.hero{padding:54px 0 28px}
+    header.hero{
+      padding:56px 0 30px;
+    }
+
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.25fr .75fr;
+      grid-template-columns: 1.18fr .82fr;
       gap:20px;
       align-items:stretch;
     }
-    .hero-card{
-      border:1px solid var(--line);
-      border-radius: var(--radius2);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
-    .hero-card .inner{padding:28px}
-    .glow{
-      position:absolute; inset:-120px -120px auto auto;
-      width:340px; height:340px; border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, rgba(110,231,255,.25), transparent 60%);
-      filter: blur(6px);
-      pointer-events:none;
-    }
-    h1{
-      margin:10px 0 10px;
-      font-size: 40px;
-      line-height:1.12;
-      letter-spacing:-.6px;
-    }
-    .subtitle{color:var(--muted); font-size:16px; margin:0 0 18px}
-    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 10px}
-    .micro{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+
+    .hero-card,
     .side-card{
       border:1px solid var(--line);
       border-radius: var(--radius2);
-      background: rgba(255,255,255,.03);
       box-shadow: var(--shadow);
-      padding:22px;
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card{
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero-card .inner{
+      padding:30px;
+      height:100%;
+    }
+
+    .glow{
+      position:absolute;
+      inset:-120px -120px auto auto;
+      width:340px;
+      height:340px;
+      border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(110,231,255,.24), transparent 60%);
+      filter: blur(6px);
+      pointer-events:none;
+    }
+
+    h1{
+      margin:12px 0 12px;
+      font-size:42px;
+      line-height:1.1;
+      letter-spacing:-.7px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+      margin:0 0 18px;
+      max-width: 60ch;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:18px 0 12px;
+    }
+
+    .micro{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    /* RESUMEN EJECUTIVO */
+    .side-card.exec{
+      padding:30px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
+      gap:16px;
+      height:100%;
     }
-    .kpi{display:grid; gap:12px; margin-top:8px;}
-    .kpi .row{
-      padding:12px 12px;
+
+    .exec-top{
+      display:grid;
+      gap:10px;
+    }
+
+    .exec-sub{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.4;
+    }
+
+    .exec-kpi{
+      display:grid;
+      gap:12px;
+    }
+
+    .kpi-box{
+      padding:14px;
       border:1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,.03);
+      border-radius:18px;
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 10px 26px rgba(15,23,42,.05);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
-    .kpi .label{color:var(--muted); font-size:12px}
-    .kpi .value{font-weight:800; margin-top:2px}
-    .note{color:var(--muted); font-size:13px}
+
+    .kpi-box:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 34px rgba(15,23,42,.08);
+      border-color: rgba(30,64,175,.18);
+    }
+
+    .kpi-box .label{
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+
+    .kpi-box .value{
+      font-weight:850;
+      margin-top:4px;
+      font-size:18px;
+      line-height:1.15;
+      color:var(--text);
+    }
+
+    .kpi-box .value .big{
+      font-size:30px;
+      margin-right:6px;
+    }
+
+    .kpi-box .hint{
+      margin-top:8px;
+      color:rgba(71,85,105,.9);
+      font-size:12.5px;
+    }
+
+    .hint.entornos{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:10px;
+    }
+
+    .hint.entornos .tag{
+      display:inline-flex;
+      align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(15,23,42,.03);
+      color: rgba(15,23,42,.72);
+      font-size:12px;
+      font-weight:650;
+    }
+
+    .mutedx{
+      color: rgba(71,85,105,.8);
+      font-weight:800;
+    }
+
+    .exec-chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .exec-foot{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      padding-top:4px;
+      margin-top:auto;
+    }
+
+    .exec-foot-text{
+      color: rgba(15,23,42,.72);
+      font-size:13.5px;
+      line-height:1.35;
+    }
 
     /* SECTIONS */
-    section{padding:34px 0}
+    section{
+      padding:36px 0;
+    }
+
     .section-head{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
       margin-bottom:16px;
     }
-    h2{margin:0; font-size:24px; letter-spacing:-.3px}
-    .lead{margin:0; color:var(--muted); font-size:14px}
+
+    h2{
+      margin:0;
+      font-size:24px;
+      letter-spacing:-.3px;
+    }
+
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .grid-3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
     }
+
     .card{
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  background: #ffffff;
-  padding:18px;
-  box-shadow: 0 10px 30px rgba(15,23,42,.06);
-}
-    .card h3{margin:0 0 8px; font-size:16px}
-    .card p{margin:0; color:var(--muted); font-size:14px}
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background:#fff;
+      padding:18px;
+      box-shadow: 0 10px 30px rgba(15,23,42,.06);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      will-change: transform;
+    }
+
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 45px rgba(15,23,42,.10);
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:16px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .icon{
-      width:36px; height:36px; border-radius: 14px;
+      width:36px;
+      height:36px;
+      border-radius:14px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.03);
-      display:flex; align-items:center; justify-content:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       margin-bottom:12px;
       font-weight:800;
     }
@@ -308,50 +463,90 @@
       grid-template-columns: 1fr 1fr;
       gap:14px;
     }
+
     .list{
-      margin:0; padding:0; list-style:none;
-      display:grid; gap:10px;
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
     }
+
     .list li{
       border:1px solid var(--line);
-      border-radius: 16px;
-      padding:12px 12px;
+      border-radius:16px;
+      padding:12px;
       background: rgba(255,255,255,.03);
       color:var(--text);
       font-size:14px;
-      display:flex; gap:10px; align-items:flex-start;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
     }
+
     .tick{
-      width:18px; height:18px; border-radius:6px;
+      width:18px;
+      height:18px;
+      border-radius:6px;
       background: rgba(52,211,153,.15);
       border:1px solid rgba(52,211,153,.35);
-      display:inline-flex; align-items:center; justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       color: var(--ok);
-      font-weight:900; font-size:12px;
+      font-weight:900;
+      font-size:12px;
       flex: 0 0 18px;
       margin-top:2px;
     }
 
     /* CASES */
-    .cases{display:grid; grid-template-columns: 1fr; gap:12px;}
+    .cases{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+
     details.case{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255,255,255,.03);
+      background: rgba(255,255,255,.4);
       overflow:hidden;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
+
+    details.case:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 14px 40px rgba(15,23,42,.08);
+    }
+
     details.case summary{
       cursor:pointer;
-      padding:16px 16px;
+      padding:16px;
       list-style:none;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
       user-select:none;
+      transition: background .18s ease;
     }
-    details.case summary::-webkit-details-marker{display:none}
-    .case-title{display:flex; align-items:center; gap:12px; font-weight:800;}
+
+    details.case summary:hover{
+      background: rgba(15,23,42,.02);
+    }
+
+    details.case summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .case-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+    }
+
     .badge{
       font-size:12px;
       padding:6px 10px;
@@ -361,46 +556,83 @@
       background: rgba(255,255,255,.02);
       white-space:nowrap;
     }
-    .chev{color:var(--muted); transition: transform .15s ease;}
-    details.case[open] .chev{transform: rotate(180deg)}
-    .case-body{padding:0 16px 16px; color:var(--muted); font-size:14px;}
+
+    .chev{
+      color:var(--muted);
+      transition: transform .18s ease;
+    }
+
+    details.case[open] .chev{
+      transform: rotate(180deg);
+    }
+
+    .case-body{
+      padding:0 16px 16px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
     .case-body .em{
       margin-top:10px;
-      color: var(--text);
-      display:inline-flex; gap:8px; align-items:center;
+      color:var(--text);
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
       font-weight:700;
     }
+
     .dot{
-      width:8px; height:8px; border-radius:999px;
+      width:8px;
+      height:8px;
+      border-radius:999px;
       background: linear-gradient(135deg, rgba(110,231,255,.9), rgba(167,139,250,.9));
       box-shadow: 0 10px 25px rgba(110,231,255,.12);
     }
 
     /* STACK */
-    .stack-wrap{display:flex; flex-wrap:wrap; gap:10px;}
+    .stack-wrap{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
 
     /* CTA */
     .cta{
       border:1px solid var(--line);
       border-radius: var(--radius2);
-      background: linear-gradient(135deg, rgba(110,231,255,.14), rgba(167,139,250,.12));
+      background: linear-gradient(135deg, rgba(110,231,255,.12), rgba(167,139,250,.10));
       box-shadow: var(--shadow);
-      padding:22px;
+      padding:24px;
       display:grid;
       grid-template-columns: 1.3fr .7fr;
       gap:16px;
       align-items:center;
     }
-    .cta h2{font-size:22px; margin:0 0 6px}
-    .cta p{margin:0; color:var(--muted)}
-    .cta .actions{display:flex; gap:12px; justify-content:flex-end; flex-wrap:wrap}
+
+    .cta h2{
+      font-size:22px;
+      margin:0 0 6px;
+    }
+
+    .cta p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .cta .actions{
+      display:flex;
+      gap:12px;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+    }
 
     /* CONTACT */
     .contact{
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:1fr 1fr;
       gap:14px;
     }
+
     .contact a.inline{
       color: var(--accent);
       text-decoration: underline;
@@ -408,14 +640,13 @@
     }
 
     footer{
-      padding:26px 0 40px;
+      padding:28px 0 42px;
       color:var(--muted);
       border-top: 1px solid var(--line);
       margin-top: 14px;
       font-size:13px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 920px){
       .hero-grid{grid-template-columns:1fr}
       .cta{grid-template-columns:1fr}
@@ -425,99 +656,17 @@
       .profile{grid-template-columns:1fr}
       .contact{grid-template-columns:1fr}
       .nav-links{display:none}
+      .hero-card .inner,
+      .side-card.exec{padding:24px}
     }
-    .btn.primary{
-  background: var(--accent);
-  border-color: var(--accent);
-  color:#ffffff;
-}
 
-.btn.primary:hover{
-  background: var(--accent2);
-  border-color: var(--accent2);
-}
- /* =========================
-   Premium micro-animaciones
-   (sutil, corporativo)
-   ========================= */
-
-.card, .btn, .pill, .chip, details.case, .nav, .logo, .icon{
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease, color .18s ease, opacity .18s ease, filter .18s ease;
-  will-change: transform;
-}
-
-.card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 18px 45px rgba(15,23,42,.10);
-}
-
-.btn:active{
-  transform: translateY(0px) scale(.99);
-}
-.btn.primary{
-  box-shadow: 0 12px 26px rgba(30,64,175,.18);
-}
-.btn.primary:hover{
-  box-shadow: 0 16px 34px rgba(37,99,235,.22);
-}
-
-.pill:hover, .chip:hover{
-  background: rgba(15,23,42,.04);
-  border-color: rgba(15,23,42,.14);
-}
-
-.nav{
-  box-shadow: 0 10px 28px rgba(15,23,42,.06);
-}
-
-details.case{
-  transform: translateY(0);
-}
-details.case:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 14px 40px rgba(15,23,42,.08);
-}
-
-details.case summary{
-  transition: background .18s ease, transform .18s ease;
-}
-details.case summary:hover{
-  background: rgba(15,23,42,.02);
-}
-
-.chev{
-  transition: transform .18s ease, color .18s ease;
-}
-
-.logo{
-  filter: saturate(1.05);
-}
-.brand:hover .logo{
-  transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(37,99,235,.18);
-}
-
-@media (prefers-reduced-motion: reduce){
-  .card, .btn, .pill, .chip, details.case, .nav, .logo, .icon, details.case summary, .chev{
-    transition: none !important;
-    transform: none !important;
-  }
-}
-/* Avatar profesional en navbar */
-.logo.avatar{
-  width:34px;
-  height:34px;
-  border-radius:12px;
-  object-fit: cover;
-  border:1px solid var(--line);
-  background:#fff;
-  box-shadow: 0 6px 18px rgba(15,23,42,.12);
-  display:block;
-}
-
-</style>
-
-
+    @media (prefers-reduced-motion: reduce){
+      .card, .btn, .pill, .chip, details.case, .logo, .kpi-box{
+        transition:none !important;
+        transform:none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -526,13 +675,12 @@ details.case summary:hover{
     <div class="container">
       <div class="nav-inner">
         <div class="brand">
-         <img 
-  src="franco-romano.jpg" 
-  alt="Franco Romano" 
-  class="logo avatar"
-           loading="lazy"
-/>
-
+          <img 
+            src="franco-romano.jpg" 
+            alt="Franco Romano" 
+            class="logo"
+            loading="lazy"
+          />
           <div>Franco Romano</div>
         </div>
 
@@ -559,104 +707,104 @@ details.case summary:hover{
         <div class="hero-card">
           <div class="glow" aria-hidden="true"></div>
           <div class="inner">
-            <span class="pill">📍 Gral. Rodríguez, Buenos Aires · Remoto / Híbrido</span>
+            <span class="pill">📍 Buenos Aires · Remoto / Híbrido</span>
 
-            <h1>Analista de Operaciones & Sistemas Logísticos<br/>SAP · ERP · KPIs</h1>
+            <h1>Consultor SAP Funcional<br>SAP EWM · S/4HANA · Procesos Logísticos</h1>
 
             <p class="subtitle">
-              Conecto la <strong>operación real</strong> con los <strong>sistemas</strong> para ordenar procesos,
-              reducir desvíos y mejorar decisiones con datos.
-              Experiencia en <strong>SAP EWM / S/4HANA</strong>, <strong>ERP</strong>, validaciones <strong>QA/PRD</strong> y tableros en <strong>Power BI</strong>.
+              Perfil orientado a conectar <strong>operación, sistema y control</strong> para diseñar procesos más ordenados,
+              validar soluciones y asegurar que la ejecución en piso tenga respaldo funcional en SAP y ERP.
+              Experiencia en <strong>SAP EWM / S/4HANA</strong>, relevamiento operativo, <strong>QA / PRD</strong>,
+              parametrización funcional, documentación y tableros de seguimiento en <strong>Power BI</strong>.
             </p>
 
-            <!-- ✅ CTA HERO (incluye Descargar CV + WhatsApp) -->
-<div class="cta-row">
-  <a class="btn primary" href="#casos">Ver casos de éxito</a>
+            <div class="cta-row">
+              <a class="btn primary" href="#casos">Ver casos de éxito</a>
 
-  <a class="btn" href="#contacto">Contactar</a>
+              <a class="btn" href="#contacto">Contactar</a>
 
-  <a class="btn"
-     href="https://drive.google.com/uc?export=download&id=1MVUJJxsWTRpVGBf3Y8A8DUMmSsBCtXFB"
-     target="_blank"
-     rel="noopener"
-     download>
-    Descargar CV
-  </a>
+              <a class="btn"
+                 href="https://drive.google.com/uc?export=download&id=1MVUJJxsWTRpVGBf3Y8A8DUMmSsBCtXFB"
+                 target="_blank"
+                 rel="noopener"
+                 download>
+                Descargar CV
+              </a>
 
-  <a class="btn"
-     href="https://wa.me/5491134206768?text=Hola%20Franco,%20estuve%20revisando%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20coordinar%20una%20charla."
-     target="_blank"
-     rel="noopener">
-    WhatsApp
-  </a>
+              <a class="btn"
+                 href="https://wa.me/5491134206768?text=Hola%20Franco,%20estuve%20revisando%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20coordinar%20una%20charla."
+                 target="_blank"
+                 rel="noopener">
+                WhatsApp
+              </a>
 
-  <a class="btn" href="https://www.linkedin.com/in/franco-romano-" target="_blank" rel="noopener">
-    Abrir LinkedIn
-  </a>
-</div>
-
+              <a class="btn"
+                 href="https://www.linkedin.com/in/franco-romano-"
+                 target="_blank"
+                 rel="noopener">
+                Abrir LinkedIn
+              </a>
+            </div>
 
             <div class="micro">
-              <span class="chip">Operación → Sistema</span>
+              <span class="chip">SAP EWM</span>
+              <span class="chip">SAP S/4HANA</span>
               <span class="chip">QA / PRD</span>
-              <span class="chip">Maestro de artículos</span>
-              <span class="chip">RF</span>
-              <span class="chip">KPIs + Power BI</span>
+              <span class="chip">ERP / WMS</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">Procesos logísticos</span>
             </div>
           </div>
         </div>
 
-     <aside class="side-card exec" aria-label="Resumen rápido">
+        <aside class="side-card exec" aria-label="Resumen rápido">
+          <div class="exec-top">
+            <div class="pill">⚡ Resumen ejecutivo</div>
+            <div class="exec-sub">
+              Perfil funcional con base operativa sólida: traduzco necesidades del negocio en procesos claros,
+              validaciones consistentes y soluciones alineadas entre operación y sistema.
+            </div>
+          </div>
 
-  <!-- Top -->
-  <div class="exec-top">
-    <div class="pill">⚡ Resumen ejecutivo</div>
-    <div class="exec-sub">
-      Puente entre operación y sistemas: convierto desvíos en procesos medibles.
-    </div>
-  </div>
+          <div class="exec-kpi">
+            <div class="kpi-box">
+              <div class="label">Experiencia</div>
+              <div class="value"><span class="big">4+</span> años</div>
+              <div class="hint entornos">
+                <span class="tag">Distribución</span>
+                <span class="tag">Cross-dock</span>
+                <span class="tag">Devoluciones</span>
+                <span class="tag">Control de stock</span>
+              </div>
+            </div>
 
-  <!-- KPIs -->
-  <div class="exec-kpi">
-    <!-- AÑOS -->
-    <div class="kpi-box">
-      <div class="label">Años</div>
-      <div class="value"><span class="big">4+</span> años</div>
-      <div class="hint entornos">
-        <span class="tag">Distribución</span>
-        <span class="tag">Cross-dock</span>
-        <span class="tag">Devoluciones</span>
-      </div>
-    </div>
+            <div class="kpi-box">
+              <div class="label">Rol natural</div>
+              <div class="value">Funcional SAP <span class="mutedx">×</span> Operaciones</div>
+              <div class="hint">Relevamiento · Validación · Parametrización · Mejora continua</div>
+            </div>
 
-    <!-- ROL -->
-    <div class="kpi-box">
-      <div class="label">Rol natural</div>
-      <div class="value">Operaciones <span class="mutedx">×</span> Sistemas</div>
-      <div class="hint">WMS / ERP · Datos · Mejora continua</div>
-    </div>
+            <div class="kpi-box">
+              <div class="label">Foco</div>
+              <div class="value">Procesos · Trazabilidad · KPIs</div>
+              <div class="hint">Control operativo, consistencia funcional y visibilidad para decidir</div>
+            </div>
+          </div>
 
-    <!-- FOCO -->
-    <div class="kpi-box">
-      <div class="label">Foco</div>
-      <div class="value">Desvíos · Control · KPIs</div>
-      <div class="hint">Causa raíz + estandarización</div>
-    </div>
-  </div>
+          <div class="exec-chips">
+            <span class="chip">SAP EWM</span>
+            <span class="chip">S/4HANA</span>
+            <span class="chip">QA/PRD</span>
+            <span class="chip">Power BI</span>
+          </div>
 
-  <!-- ✅ MICRO-CIERRE (ACÁ) -->
-  <div class="exec-foot">
-    .exec-foot{
-  margin-top: auto;   /* clave: empuja el cierre hacia abajo */
-}
-    <span class="pill">🎯 Enfoque de gestión</span>
-    <span class="exec-foot-text">
-      Control operativo, trazabilidad y gestión por indicadores.
-    </span>
-  </div>
-
-</aside>
-
+          <div class="exec-foot">
+            <span class="pill">🎯 Enfoque de gestión</span>
+            <span class="exec-foot-text">
+              Procesos consistentes, datos confiables y soluciones funcionales alineadas al negocio.
+            </span>
+          </div>
+        </aside>
       </div>
     </div>
   </header>
@@ -667,25 +815,25 @@ details.case summary:hover{
       <div class="section-head">
         <div>
           <h2>Impacto que genero</h2>
-          <p class="lead">Menos ruido operativo, más control sistémico y decisiones con data.</p>
+          <p class="lead">Procesos más claros, validaciones sólidas y mejor conexión entre negocio, sistema y operación.</p>
         </div>
       </div>
 
       <div class="grid-3">
         <div class="card">
           <div class="icon">🧩</div>
-          <h3>Operación ↔ Sistema</h3>
-          <p>Traduzco lo que pasa en piso a reglas de WMS/ERP: procesos claros, datos maestros bien definidos y menos desvíos.</p>
+          <h3>Proceso ↔ Sistema</h3>
+          <p>Relevo necesidades operativas y las traduzco en reglas funcionales para SAP / ERP, asegurando coherencia entre ejecución y sistema.</p>
         </div>
         <div class="card">
           <div class="icon">🧪</div>
-          <h3>QA / PRD y control</h3>
-          <p>Valido procesos en entornos de prueba y productivos, documento fallas y coordino ajustes con equipos de desarrollo.</p>
+          <h3>Validación funcional</h3>
+          <p>Diseño y ejecuto pruebas QA / PRD, documento incidencias y acompaño ajustes para estabilizar procesos antes de escalar.</p>
         </div>
         <div class="card">
           <div class="icon">📈</div>
-          <h3>KPIs accionables</h3>
-          <p>Tableros en Power BI y seguimiento operativo (Fill Rate, stock, productividad) para decidir rápido y con evidencia.</p>
+          <h3>Control y visibilidad</h3>
+          <p>Construyo KPIs y tableros para seguimiento operativo y funcional, priorizando desvíos reales y decisiones basadas en datos.</p>
         </div>
       </div>
     </div>
@@ -697,44 +845,41 @@ details.case summary:hover{
       <div class="section-head">
         <div>
           <h2>Perfil</h2>
-          <p class="lead">Híbrido: entiendo operación y también el “por qué” del sistema.</p>
+          <p class="lead">Base operativa fuerte con enfoque funcional, orientado a consultoría SAP y mejora de procesos.</p>
         </div>
       </div>
 
       <div class="profile">
         <div class="card">
           <h3>Quién soy</h3>
-         <p>
-  Analista de Operaciones Logísticas con foco en sistemas y control de procesos. Trabajo integrando
-<strong>operación real + sistemas</strong> para ordenar flujos, asegurar trazabilidad y reducir
-reprocesos en entornos de alta demanda operativa.
-<br><br>
-Tengo experiencia en optimización de procesos, gestión de datos maestros y seguimiento de KPIs,
-participando activamente en validaciones <strong>QA / PRD</strong>, detección de desvíos y
-documentación funcional para asegurar que el sistema acompañe lo que pasa en piso.
-<br><br>
-Mi foco está en generar <strong>orden operativo sostenible</strong>: procesos claros, datos
-confiables y tableros que permitan gestionar con información y no por intuición.
-Me integro rápido a equipos y priorizo impacto con criterio práctico.
-
-<p style="margin-top:10px">
-  Formación técnica en logística, experiencia con <strong>SAP EWM y S/4HANA</strong>,
-  uso funcional de ERP/WMS y desarrollo de indicadores para la toma de decisiones.
-  Perfil orientado a resultados, mejora continua y optimización de procesos,
-  con interacción constante entre áreas operativas y de sistemas.
-</p>
-
+          <p>
+            Profesional con experiencia en operaciones logísticas y sistemas, orientado a roles de <strong>consultoría funcional SAP</strong>,
+            especialmente en procesos vinculados a almacenamiento, despacho, trazabilidad, control y soporte al negocio.
+          </p>
+          <p style="margin-top:10px">
+            Mi diferencial está en entender tanto la <strong>ejecución real de la operación</strong> como la lógica que necesita el sistema para
+            sostener procesos ordenados, medibles y escalables. Trabajo sobre relevamientos, validaciones funcionales, documentación,
+            seguimiento de desvíos y mejora continua.
+          </p>
+          <p style="margin-top:10px">
+            Tengo experiencia participando en entornos <strong>QA / PRD</strong>, pruebas end-to-end, parametrización funcional,
+            datos maestros y construcción de indicadores para visibilidad operativa y toma de decisiones.
+          </p>
+          <p style="margin-top:10px">
+            Hoy estoy enfocado en consolidar un perfil de <strong>Consultor SAP Funcional</strong>, aportando mirada de negocio,
+            criterio operativo y capacidad de traducir necesidades concretas en soluciones aplicables.
+          </p>
         </div>
 
         <div class="card">
           <h3>Especialidades</h3>
           <ul class="list">
-            <li><span class="tick">✓</span> SAP EWM / S/4HANA (visión funcional operativa)</li>
-            <li><span class="tick">✓</span> QA / PRD: validación, documentación y seguimiento de incidencias</li>
-            <li><span class="tick">✓</span> Maestro de artículos: parametrización y calidad de datos</li>
-            <li><span class="tick">✓</span> Procesos: flujo, layout, devoluciones y controles por RF</li>
-            <li><span class="tick">✓</span> KPIs + Power BI: seguimiento, alertas y priorización</li>
-            <li><span class="tick">✓</span> Excel avanzado + análisis de datos</li>
+            <li><span class="tick">✓</span> SAP EWM / S/4HANA con visión funcional aplicada a procesos logísticos</li>
+            <li><span class="tick">✓</span> Relevamiento operativo y traducción funcional de necesidades del negocio</li>
+            <li><span class="tick">✓</span> QA / PRD: pruebas, documentación, seguimiento y validación de incidencias</li>
+            <li><span class="tick">✓</span> Datos maestros: parametrización, consistencia y calidad de información</li>
+            <li><span class="tick">✓</span> Procesos logísticos: despacho, devoluciones, layout, RF y control de stock</li>
+            <li><span class="tick">✓</span> KPIs, Power BI y Excel avanzado para seguimiento y priorización</li>
           </ul>
         </div>
       </div>
@@ -747,7 +892,7 @@ Me integro rápido a equipos y priorizo impacto con criterio práctico.
       <div class="section-head">
         <div>
           <h2>Casos de éxito</h2>
-          <p class="lead">Primero sistema + control, después eficiencia. Orden de prioridad real.</p>
+          <p class="lead">Experiencias donde combiné operación, validación funcional y control para mejorar procesos.</p>
         </div>
         <a class="btn" href="#contacto">Hablemos</a>
       </div>
@@ -762,132 +907,116 @@ Me integro rápido a equipos y priorizo impacto con criterio práctico.
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Detecté desvíos operativos recurrentes originados en información incompleta o incorrecta del maestro de artículos
-  (unidades logísticas, atributos de picking, reglas de almacenamiento y datos clave para el flujo).
-  Relevé el proceso en piso, identifiqué los campos críticos, realicé correcciones y validé el impacto con pruebas controladas,
-  asegurando coherencia entre operación y sistema.
-  <div class="em"><span class="dot"></span>Impacto: menos errores en preparación y despacho, mejor calidad de stock y mayor trazabilidad</div>
-</div>
+            Detecté desvíos operativos originados en información incompleta o incorrecta del maestro de artículos, vinculada a unidades logísticas,
+            atributos de picking, reglas de almacenamiento y datos críticos para el flujo.
+            Relevé necesidades, identifiqué campos sensibles, ajusté definiciones y validé el impacto con pruebas funcionales controladas.
+            <div class="em"><span class="dot"></span>Impacto: menos errores en preparación y despacho, mayor consistencia operativa y mejor trazabilidad</div>
+          </div>
         </details>
 
         <details class="case">
           <summary>
             <div class="case-title">
               <span class="badge">02</span>
-              Desarrollo de nuevos procesos: controles por RF
+              Implementación de controles por RF
             </div>
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Implementé controles operativos mediante RF para asegurar trazabilidad en movimientos críticos y reducir dependencias de tareas manuales.
-  Definí validaciones por etapa, armé pruebas funcionales end-to-end, documenté desvíos y acompañé a usuarios en el arranque
-  para estabilizar el proceso sin frenar la operación.
-  <div class="em"><span class="dot"></span>Impacto: más control sistémico, menos errores manuales y datos confiables para gestión</div>
-</div>
-
+            Participé en el diseño y validación de controles operativos mediante RF para asegurar trazabilidad en movimientos críticos y reducir tareas manuales.
+            Definí escenarios de prueba, documenté incidencias y acompañé la estabilización del proceso en su arranque.
+            <div class="em"><span class="dot"></span>Impacto: más control sistémico, menos errores manuales y mayor confiabilidad del dato</div>
+          </div>
         </details>
 
         <details class="case">
           <summary>
             <div class="case-title">
               <span class="badge">03</span>
-              Pruebas end-to-end de despacho (clientes de distribución)
+              Pruebas end-to-end de despacho
             </div>
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Realicé validaciones completas del circuito de despacho: desde la preparación hasta la salida, seguimiento y devoluciones,
-  asegurando consistencia entre reglas del sistema y ejecución real en piso.
-  Armé escenarios de prueba, medí puntos de falla, documenté incidencias y coordiné ajustes para evitar desvíos antes de escalar volúmenes.
-  <div class="em"><span class="dot"></span>Impacto: detección temprana de errores, menos reprocesos y mayor estabilidad operativa</div>
-</div>
-
+            Ejecuté validaciones completas del circuito de despacho, desde preparación hasta salida y devoluciones, contrastando la lógica del sistema con la ejecución real.
+            Armé escenarios, medí puntos de falla, documenté hallazgos y coordiné ajustes previos a la operación masiva.
+            <div class="em"><span class="dot"></span>Impacto: detección temprana de errores, menos reprocesos y mayor estabilidad del proceso</div>
+          </div>
         </details>
 
         <details class="case">
           <summary>
             <div class="case-title">
               <span class="badge">04</span>
-              Generación y seguimiento de KPIs (Power BI / Excel)
+              KPIs y tableros de seguimiento
             </div>
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Definí indicadores operativos y de control (stock, productividad, tiempos, nivel de servicio) y armé reportes para seguimiento continuo.
-  Estandaricé la toma de datos, construí tableros en Power BI/Excel y dejé la información lista para lectura rápida y toma de decisiones,
-  priorizando alertas y desvíos por impacto.
-  <div class="em"><span class="dot"></span>Impacto: gestión por datos, decisiones más rápidas y foco en desvíos reales</div>
-</div>
-
+            Definí indicadores operativos y funcionales vinculados a stock, productividad, tiempos y nivel de servicio.
+            Estandaricé la toma de datos y construí tableros en Power BI y Excel para lectura rápida y gestión por desvíos.
+            <div class="em"><span class="dot"></span>Impacto: mayor visibilidad, mejor seguimiento y decisiones más rápidas basadas en evidencia</div>
+          </div>
         </details>
 
         <details class="case">
           <summary>
             <div class="case-title">
               <span class="badge">05</span>
-              Reorganización del flujo de mercadería del depósito
+              Reorganización del flujo de mercadería
             </div>
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Analicé recorridos, congestiones y puntos de espera dentro del depósito para mejorar la fluidez operativa.
-  Reorganicé el flujo separando zonas de ingreso, preparación y salida, alineando el layout físico con el proceso real
-  para reducir cruces innecesarios y mejorar el orden del circuito.
-  <div class="em"><span class="dot"></span>Impacto: menos recorridos internos, mayor fluidez y reducción de tiempos operativos</div>
-</div>
-
+            Analicé recorridos, congestiones y puntos de espera dentro del depósito para alinear el layout físico con el proceso real.
+            Reorganicé zonas de ingreso, preparación y salida para reducir cruces innecesarios y mejorar el orden del circuito.
+            <div class="em"><span class="dot"></span>Impacto: menor recorrido interno, mayor fluidez y reducción de tiempos operativos</div>
+          </div>
         </details>
 
         <details class="case">
           <summary>
             <div class="case-title">
               <span class="badge">06</span>
-              Layout según rotación ABC y tipo de material
+              Layout según rotación ABC
             </div>
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Rediseñé la ubicación de mercadería aplicando criterios de rotación ABC y características del material,
-  priorizando accesibilidad y eficiencia de preparación.
-  Reorganicé zonas y posiciones para acercar alta rotación al picking y ubicar baja rotación en áreas secundarias,
-  manteniendo control por tipo de producto y reglas de almacenamiento.
-  <div class="em"><span class="dot"></span>Impacto: mayor productividad de picking, mejor orden de almacenamiento y menos tiempos muertos</div>
-</div>
-
+            Rediseñé ubicaciones de mercadería según criterios de rotación ABC y características del material, priorizando accesibilidad y eficiencia de preparación.
+            Organicé posiciones con lógica operativa y funcional para sostener productividad y control.
+            <div class="em"><span class="dot"></span>Impacto: mejor orden de almacenamiento, mayor productividad de picking y menos tiempos muertos</div>
+          </div>
         </details>
 
         <details class="case">
           <summary>
             <div class="case-title">
               <span class="badge">07</span>
-              Flujo de devoluciones (logística inversa)
+              Estandarización de devoluciones
             </div>
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Estandaricé el circuito de devoluciones desde el ingreso hasta la definición de destino final (reingreso, cuarentena, reproceso o baja),
-  incorporando controles operativos para evitar pérdidas y diferencias de stock.
-  Clasifiqué causas, ordené el proceso de registro y consolidé seguimiento para reducir reprocesos y mejorar trazabilidad.
-  <div class="em"><span class="dot"></span>Impacto: más trazabilidad, mejor control de stock y reducción de errores en devoluciones</div>
-</div>
-
+            Participé en la definición y ordenamiento del circuito de devoluciones desde el ingreso hasta la decisión de destino final.
+            Incorporé controles de registro y seguimiento para reducir pérdidas, diferencias de stock y reprocesos.
+            <div class="em"><span class="dot"></span>Impacto: más trazabilidad, mejor control de stock y menor error en logística inversa</div>
+          </div>
         </details>
 
         <details class="case">
           <summary>
             <div class="case-title">
               <span class="badge">08</span>
-              Mejora de proceso de picking
+              Mejora del proceso de picking
             </div>
             <span class="chev">▾</span>
           </summary>
           <div class="case-body">
-  Evalué el proceso de picking midiendo tiempos, secuencia de preparación, recorridos y carga por operario,
-  detectando oportunidades de mejora sin sumar recursos.
-  Ajusté criterios de preparación y orden de tareas, realicé pruebas comparativas y validé el rendimiento en condiciones reales de operación.
-  <div class="em"><span class="dot"></span>Impacto: aumento de productividad, menos reprocesos y mayor consistencia en preparación</div>
-</div>
-
+            Analicé tiempos, secuencia, recorridos y carga de trabajo por operario para detectar oportunidades de mejora sin sumar recursos.
+            Ajusté criterios de preparación, validé cambios en condiciones reales y medí su impacto.
+            <div class="em"><span class="dot"></span>Impacto: mayor productividad, menos reprocesos y mejor consistencia en la preparación</div>
+          </div>
         </details>
       </div>
     </div>
@@ -899,24 +1028,25 @@ Me integro rápido a equipos y priorizo impacto con criterio práctico.
       <div class="section-head">
         <div>
           <h2>Herramientas</h2>
-          <p class="lead">Tecnología aplicada a resultados operativos.</p>
+          <p class="lead">Tecnología y enfoque funcional aplicados a procesos de negocio.</p>
         </div>
       </div>
 
       <div class="card">
-       <div class="stack-wrap">
-  <span class="chip">SAP EWM</span>
-  <span class="chip">SAP S/4HANA</span>
-  <span class="chip">ERP / WMS (uso funcional)</span>
-  <span class="chip">Power BI (KPIs & dashboards)</span>
-  <span class="chip">Excel Avanzado</span>
-  <span class="chip">QA / PRD</span>
-  <span class="chip">Maestro de artículos</span>
-  <span class="chip">Control de stock físico vs sistémico</span>
-  <span class="chip">Layout & slotting ABC</span>
-  <span class="chip">RF & trazabilidad</span>
-  <span class="chip">Mejora continua</span>
-</div>
+        <div class="stack-wrap">
+          <span class="chip">SAP EWM</span>
+          <span class="chip">SAP S/4HANA</span>
+          <span class="chip">ERP / WMS</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Excel Avanzado</span>
+          <span class="chip">QA / PRD</span>
+          <span class="chip">Datos maestros</span>
+          <span class="chip">RF & trazabilidad</span>
+          <span class="chip">Layout & slotting ABC</span>
+          <span class="chip">Control de stock</span>
+          <span class="chip">Mejora continua</span>
+          <span class="chip">Documentación funcional</span>
+        </div>
       </div>
     </div>
   </section>
@@ -926,33 +1056,33 @@ Me integro rápido a equipos y priorizo impacto con criterio práctico.
     <div class="container">
       <div class="cta">
         <div>
-          <h2>Si necesitás alinear operación y sistemas, hablemos.</h2>
-          <p>Me integro rápido, valido procesos, ordeno datos y dejo KPIs listos para gestionar sin adivinar.</p>
+          <h2>Si necesitás alinear procesos logísticos y sistema, hablemos.</h2>
+          <p>Aporto mirada funcional, criterio operativo y capacidad para traducir necesidades del negocio en soluciones consistentes.</p>
         </div>
         <div class="actions">
-  <a class="btn primary" href="#contacto">Contactar</a>
+          <a class="btn primary" href="#contacto">Contactar</a>
 
-  <a class="btn"
-     href="https://wa.me/5491134206768?text=Hola%20Franco,%20estuve%20revisando%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20coordinar%20una%20charla."
-     target="_blank"
-     rel="noopener">
-    WhatsApp
-  </a>
+          <a class="btn"
+             href="https://wa.me/5491134206768?text=Hola%20Franco,%20estuve%20revisando%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20coordinar%20una%20charla."
+             target="_blank"
+             rel="noopener">
+            WhatsApp
+          </a>
 
-  <a class="btn"
-     href="https://drive.google.com/uc?export=download&id=1MVUJJxsWTRpVGBf3Y8A8DUMmSsBCtXFB"
-     target="_blank"
-     rel="noopener">
-    Descargar CV
-  </a>
+          <a class="btn"
+             href="https://drive.google.com/uc?export=download&id=1MVUJJxsWTRpVGBf3Y8A8DUMmSsBCtXFB"
+             target="_blank"
+             rel="noopener">
+            Descargar CV
+          </a>
 
-  <a class="btn"
-     href="https://www.linkedin.com/in/franco-romano-"
-     target="_blank"
-     rel="noopener">
-    LinkedIn
-  </a>
-</div>
+          <a class="btn"
+             href="https://www.linkedin.com/in/franco-romano-"
+             target="_blank"
+             rel="noopener">
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -963,7 +1093,7 @@ Me integro rápido a equipos y priorizo impacto con criterio práctico.
       <div class="section-head">
         <div>
           <h2>Contacto</h2>
-          <p class="lead">Si hay proceso para ordenar y sistema para alinear, me prendo.</p>
+          <p class="lead">Disponible para posiciones de consultoría funcional, soporte SAP y mejora de procesos.</p>
         </div>
       </div>
 
@@ -986,9 +1116,9 @@ Me integro rápido a equipos y priorizo impacto con criterio práctico.
           <h3>Disponibilidad</h3>
           <p class="lead">Buenos Aires · Remoto / Híbrido</p>
           <ul class="list" style="margin-top:12px">
-            <li><span class="tick">✓</span> Soporte funcional SAP/ERP + validaciones</li>
-            <li><span class="tick">✓</span> Procesos operativos (flujo, layout, devoluciones)</li>
-            <li><span class="tick">✓</span> KPIs + tableros para gestión</li>
+            <li><span class="tick">✓</span> Soporte funcional SAP / ERP</li>
+            <li><span class="tick">✓</span> Validaciones QA / PRD y pruebas end-to-end</li>
+            <li><span class="tick">✓</span> Procesos logísticos, KPIs y mejora continua</li>
           </ul>
         </div>
       </div>
@@ -997,18 +1127,21 @@ Me integro rápido a equipos y priorizo impacto con criterio práctico.
 
   <footer>
     <div class="container">
-      © <span id="year"></span> Franco Romano · Operaciones + SAP / Sistemas · SAP · ERP · KPIs
+      © <span id="year"></span> Franco Romano · Consultor SAP Funcional · SAP EWM · S/4HANA · Procesos Logísticos
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Cierra otros cases al abrir uno (UX prolija)
     const cases = document.querySelectorAll("details.case");
     cases.forEach(d => {
       d.addEventListener("toggle", () => {
-        if (d.open) cases.forEach(other => { if (other !== d) other.open = false; });
+        if (d.open) {
+          cases.forEach(other => {
+            if (other !== d) other.open = false;
+          });
+        }
       });
     });
   </script>
